@@ -1,70 +1,157 @@
 <!doctype html>
-<div class="card">
-<img src="https://source.unsplash.com/1200x800/?plumbing,hydraulic" alt="Materiais hidráulicos">
-<h3>Materiais Hidráulicos</h3>
-<p>Canos, conexões, bombas e acessórios.</p>
-</div>
-</div>
-</section>
+<html lang="pt-BR">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width,initial-scale=1">
+  <title>Engeshop — O Shopping da Engenharia</title>
+  <meta name="description" content="Engeshop - Comércio de ferramentas, materiais e equipamentos para engenharia e construção. Melhores marcas, menor preço e entrega rápida.">
+  <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;600;700&display=swap" rel="stylesheet">
+  <style>
+    :root{
+      --blue:#001f8e; --gray:#a0a0a0; --muted:#f5f7fb; --radius:10px;
+      font-family: 'Montserrat', sans-serif;
+    }
+    *{box-sizing:border-box}
+    body{margin:0;color:#1b1b1b;background:#fff;line-height:1.4}
+    header{background:linear-gradient(180deg,var(--muted),#fff);padding:28px 20px;display:flex;align-items:center;justify-content:space-between}
+    .logo{display:flex;align-items:center;gap:18px}
+    .logo img{height:68px}
+    nav{display:flex;gap:12px;align-items:center}
+    nav a{color:var(--blue);text-decoration:none;font-weight:600}
+    .hero{display:grid;grid-template-columns:1fr 520px;gap:32px;padding:48px 6%;align-items:center}
+    .hero h1{font-size:36px;color:var(--blue);margin:0}
+    .hero p{color:#333;margin:12px 0 20px}
+    .btn{background:var(--blue);color:#fff;padding:12px 20px;border-radius:8px;text-decoration:none;font-weight:700;display:inline-block}
+    .outline{border:2px solid var(--blue);color:var(--blue);background:#fff}
+    .hero img{width:100%;height:360px;object-fit:cover;border-radius:12px;box-shadow:0 8px 30px rgba(0,0,0,0.08)}
+    .section{padding:48px 6%}
+    .grid-4{display:grid;grid-template-columns:repeat(4,1fr);gap:18px}
+    .card{background:#fff;border-radius:12px;padding:18px;box-shadow:0 6px 18px rgba(0,0,0,0.05);text-align:center}
+    .card h3{margin:12px 0;color:var(--blue)}
+    .products{display:grid;grid-template-columns:repeat(3,1fr);gap:18px}
+    .products img{width:100%;height:220px;object-fit:cover;border-radius:10px}
+    .contact{background:var(--blue);color:#fff;padding:36px;border-radius:12px;display:flex;gap:20px;align-items:center}
+    .contact .left{flex:1}
+    footer{background:#0b1b4a;color:#fff;padding:24px 6%;display:flex;justify-content:space-between;align-items:center}
+    @media(max-width:900px){
+      .hero{grid-template-columns:1fr;gap:18px}
+      .products{grid-template-columns:1fr}
+      .grid-4{grid-template-columns:repeat(2,1fr)}
+    }
+  </style>
+</head>
+<body>
+  <header>
+    <div class="logo">
+      <img src="/mnt/data/ENGENSHOP OFICIAL.png" alt="Engeshop - logo">
+      <div>
+        <div style="color:var(--blue);font-weight:700">ENGESHOP</div>
+        <small style="color:var(--gray);display:block">O Shopping da Engenharia!</small>
+      </div>
+    </div>
+    <nav>
+      <a href="#produtos">Produtos</a>
+      <a href="#diferenciais">Diferenciais</a>
+      <a href="#contato" class="btn">Solicite sua Cotação</a>
+    </nav>
+  </header>
 
+  <main>
+    <!-- HERO -->
+    <section class="hero" aria-label="Apresentação">
+      <div>
+        <h1>Tudo o que sua obra precisa em um só lugar</h1>
+        <p>Somos a maior e mais completa empresa para engenharia e construção: ferramentas, ferragens, materiais elétricos e hidráulicos, instrumentos de medição, EPI/EPC, máquinas e muito mais — com as melhores marcas nacionais e importadas.</p>
+        <div style="display:flex;gap:12px;align-items:center">
+          <a class="btn" href="#contato">Peça sua Cotação</a>
+          <a class="btn outline" href="#produtos">Conheça Produtos</a>
+        </div>
+        <ul style="margin:20px 0 0;padding-left:18px;color:#333">
+          <li>Atendemos engenharias, construtoras, indústrias e obras de todos os tamanhos</li>
+          <li>Melhor preço do mercado e entrega rápida</li>
+          <li>Mais de 10.000 itens em estoque</li>
+        </ul>
+      </div>
+      <div>
+        <img src="https://source.unsplash.com/1600x900/?construction,crane" alt="Canteiro de obras moderno">
+      </div>
+    </section>
 
-<!-- DIFERENCIAIS -->
-<section id="diferenciais" class="section" style="background:var(--muted);border-radius:12px;margin:0 6% 24px;padding:36px">
-<h2 style="color:var(--blue);margin-bottom:12px">Por que escolher a Engeshop</h2>
-<div class="grid-4">
-<div class="card"><h3>Entrega Rápida</h3><p>Logística otimizada para entregas em todo o Brasil.</p></div>
-<div class="card"><h3>Melhores Preços</h3><p>Negociação direta com fabricantes para reduzir custos.</p></div>
-<div class="card"><h3>Atendimento Técnico</h3><p>Suporte especializado para projetos e especificações.</p></div>
-<div class="card"><h3>Variedade</h3><p>Mais de 10.000 itens — do pequeno reparo à grande obra.</p></div>
-</div>
-</section>
+    <!-- PRODUTOS -->
+    <section id="produtos" class="section">
+      <h2 style="color:var(--blue);margin-bottom:18px">Nossas Linhas de Produtos</h2>
+      <div class="products">
+        <div class="card">
+          <img src="https://source.unsplash.com/1200x800/?tools,flatlay" alt="Ferramentas manuais e elétricas">
+          <h3>Ferramentas Manuais e Elétricas</h3>
+          <p>Marcas líderes para aplicações profissionais.</p>
+        </div>
+        <div class="card">
+          <img src="https://source.unsplash.com/1200x800/?electrical,materials" alt="Materiais elétricos">
+          <h3>Materiais Elétricos</h3>
+          <p>Cabos, disjuntores e componentes certificados.</p>
+        </div>
+        <div class="card">
+          <img src="https://source.unsplash.com/1200x800/?plumbing,hydraulic" alt="Materiais hidráulicos">
+          <h3>Materiais Hidráulicos</h3>
+          <p>Canos, conexões, bombas e acessórios.</p>
+        </div>
+      </div>
+    </section>
 
+    <!-- DIFERENCIAIS -->
+    <section id="diferenciais" class="section" style="background:var(--muted);border-radius:12px;margin:0 6% 24px;padding:36px">
+      <h2 style="color:var(--blue);margin-bottom:12px">Por que escolher a Engeshop</h2>
+      <div class="grid-4">
+        <div class="card"><h3>Entrega Rápida</h3><p>Logística otimizada para entregas em todo o Brasil.</p></div>
+        <div class="card"><h3>Melhores Preços</h3><p>Negociação direta com fabricantes para reduzir custos.</p></div>
+        <div class="card"><h3>Atendimento Técnico</h3><p>Suporte especializado para projetos e especificações.</p></div>
+        <div class="card"><h3>Variedade</h3><p>Mais de 10.000 itens — do pequeno reparo à grande obra.</p></div>
+      </div>
+    </section>
 
-<!-- IMAGENS DE ATRAÇÃO -->
-<section class="section">
-<div style="display:grid;grid-template-columns:2fr 1fr;gap:18px;align-items:stretch">
-<div style="border-radius:12px;overflow:hidden"><img src="https://source.unsplash.com/1200x800/?safety,hardhat" alt="Equipamentos de segurança" style="width:100%;height:100%;object-fit:cover"></div>
-<div style="display:flex;flex-direction:column;gap:12px">
-<div style="border-radius:12px;overflow:hidden"><img src="https://source.unsplash.com/800x600/?delivery,truck" alt="Entrega e logística" style="width:100%;height:100%;object-fit:cover"></div>
-<div style="border-radius:12px;overflow:hidden"><img src="https://source.unsplash.com/800x400/?measuring,instrument" alt="Instrumentos de medição" style="width:100%;height:100%;object-fit:cover"></div>
-</div>
-</div>
-</section>
+    <!-- IMAGENS DE ATRAÇÃO -->
+    <section class="section">
+      <div style="display:grid;grid-template-columns:2fr 1fr;gap:18px;align-items:stretch">
+        <div style="border-radius:12px;overflow:hidden"><img src="https://source.unsplash.com/1200x800/?safety,hardhat" alt="Equipamentos de segurança" style="width:100%;height:100%;object-fit:cover"></div>
+        <div style="display:flex;flex-direction:column;gap:12px">
+          <div style="border-radius:12px;overflow:hidden"><img src="https://source.unsplash.com/800x600/?delivery,truck" alt="Entrega e logística" style="width:100%;height:100%;object-fit:cover"></div>
+          <div style="border-radius:12px;overflow:hidden"><img src="https://source.unsplash.com/800x400/?measuring,instrument" alt="Instrumentos de medição" style="width:100%;height:100%;object-fit:cover"></div>
+        </div>
+      </div>
+    </section>
 
+    <!-- CONTATO -->
+    <section id="contato" class="section">
+      <div class="contact">
+        <div class="left">
+          <h2 style="margin:0 0 8px;font-size:22px">Fale Conosco e solicite sua cotação</h2>
+          <p style="margin:0 0 8px">Atendimento rápido para obras civis, indústrias e engenharias. Informe o porte da obra e a lista de itens — nós cuidamos do resto.</p>
+          <p style="margin:6px 0;font-weight:700">📞 (11) 2359-9052 &nbsp;&nbsp; | &nbsp;&nbsp; ✉️ falecom@engeshop.com.br</p>
+          <a href="mailto:falecom@engeshop.com.br" class="btn" style="background:#fff;color:var(--blue);font-weight:800">Enviar E-mail</a>
+        </div>
+        <form action="#" style="display:flex;flex-direction:column;gap:10px;max-width:420px">
+          <input type="text" name="nome" placeholder="Nome / Empresa" required style="padding:12px;border-radius:8px;border:1px solid #ddd">
+          <input type="tel" name="tel" placeholder="Telefone" required style="padding:12px;border-radius:8px;border:1px solid #ddd">
+          <input type="email" name="email" placeholder="E-mail" required style="padding:12px;border-radius:8px;border:1px solid #ddd">
+          <textarea name="mensagem" placeholder="Lista de itens ou breve descrição do projeto" rows="4" style="padding:12px;border-radius:8px;border:1px solid #ddd"></textarea>
+          <button type="submit" class="btn">Solicitar Cotação</button>
+        </form>
+      </div>
+    </section>
 
-<!-- CONTATO -->
-<section id="contato" class="section">
-<div class="contact">
-<div class="left">
-<h2 style="margin:0 0 8px;font-size:22px">Fale Conosco e solicite sua cotação</h2>
-<p style="margin:0 0 8px">Atendimento rápido para obras civis, indústrias e engenharias. Informe o porte da obra e a lista de itens — nós cuidamos do resto.</p>
-<p style="margin:6px 0;font-weight:700">📞 (11) 2359-9052 &nbsp;&nbsp; | &nbsp;&nbsp; ✉️ falecom@engeshop.com.br</p>
-<a href="mailto:falecom@engeshop.com.br" class="btn" style="background:#fff;color:var(--blue);font-weight:800">Enviar E-mail</a>
-</div>
-<form action="#" style="display:flex;flex-direction:column;gap:10px;max-width:420px">
-<input type="text" name="nome" placeholder="Nome / Empresa" required style="padding:12px;border-radius:8px;border:1px solid #ddd">
-<input type="tel" name="tel" placeholder="Telefone" required style="padding:12px;border-radius:8px;border:1px solid #ddd">
-<input type="email" name="email" placeholder="E-mail" required style="padding:12px;border-radius:8px;border:1px solid #ddd">
-<textarea name="mensagem" placeholder="Lista de itens ou breve descrição do projeto" rows="4" style="padding:12px;border-radius:8px;border:1px solid #ddd"></textarea>
-<button type="submit" class="btn">Solicitar Cotação</button>
-</form>
-</div>
-</section>
+  </main>
 
-
-</main>
-
-
-<footer>
-<div>
-<strong>ENGESHOP</strong><br>
-O Shopping da Engenharia!<br>
-(11) 2359-9052 • falecom@engeshop.com.br
-</div>
-<div style="text-align:right">
-© 2025 Engeshop<br>
-<small>Atendemos engenharias, construtoras, indústrias e obras de todos os portes.</small>
-</div>
-</footer>
+  <footer>
+    <div>
+      <strong>ENGESHOP</strong><br>
+      O Shopping da Engenharia!<br>
+      (11) 2359-9052 • falecom@engeshop.com.br
+    </div>
+    <div style="text-align:right">
+      © 2025 Engeshop<br>
+      <small>Atendemos engenharias, construtoras, indústrias e obras de todos os portes.</small>
+    </div>
+  </footer>
 </body>
 </html>
