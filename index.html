@@ -145,14 +145,40 @@
           <p style="margin:6px 0;font-weight:700">📞 (11) 2359-9052 &nbsp;&nbsp; | &nbsp;&nbsp; ✉️ falecom@engeshop.com.br</p>
           <a href="mailto:falecom@engeshop.com.br" class="btn" style="background:#fff;color:var(--blue);font-weight:800">Enviar E-mail</a>
         </div>
-        <form action="#" style="display:flex;flex-direction:column;gap:12px;width:100%;max-width:700px">
-          <input type="text" name="nome" placeholder="Nome / Empresa" required style="padding:12px;border-radius:8px;border:1px solid #ddd">
-          <input type="tel" name="tel" placeholder="Telefone" required style="padding:12px;border-radius:8px;border:1px solid #ddd">
-          <input type="email" name="email" placeholder="E-mail" required style="padding:12px;border-radius:8px;border:1px solid #ddd">
-          <textarea name="mensagem" placeholder="Lista de itens ou breve descrição do projeto" rows="4" style="padding:12px;border-radius:8px;border:1px solid #ddd"></textarea>
-          <button type="submit" class="btn">Solicitar Cotação</button>
-        </form>
-      </div>
+       <form id="orcamentoForm" style="display:flex;flex-direction:column;gap:20px;width:100%;max-width:900px">
+    <input type="text" name="nome" placeholder="Nome / Empresa" required style="padding:12px;border-radius:8px;border:1px solid #ddd">
+    <input type="tel" name="tel" placeholder="Telefone" required style="padding:12px;border-radius:8px;border:1px solid #ddd">
+    <input type="email" name="email" placeholder="E-mail" required style="padding:12px;border-radius:8px;border:1px solid #ddd">
+    <textarea name="mensagem" placeholder="Lista de itens ou breve descrição do projeto" rows="4" style="padding:12px;border-radius:8px;border:1px solid #ddd"></textarea>
+    <div style="display: flex; align-items: center; gap: 16px;">
+      <button type="submit" class="btn">Solicitar Cotação</button>
+      <span id="mensagemStatus" style="color:green;font-weight:bold;"></span>
+    </div>
+  </form>
+  
+  <!-- Cole o script logo após o formulário -->
+  <script>
+  document.getElementById('orcamentoForm').addEventListener('submit', function(e) {
+    e.preventDefault();
+
+    // Cria um objeto FormData com os dados do formulário
+    const form = e.target;
+    const formData = new FormData(form);
+
+    // Envia para Formsubmit via fetch
+    fetch('https://formsubmit.co/ajax/ry.testes1984@gmail.com', {
+      method: 'POST',
+      body: formData
+    }).then(response => {
+      if (response.ok) {
+        document.getElementById('mensagemStatus').textContent = 'Mensagem Enviada com Sucesso!';
+        form.reset(); // opcional: limpa o formulário
+      } else {
+        document.getElementById('mensagemStatus').textContent = 'Erro ao Enviar, tente novamente.';
+      }
+    });
+  });
+  </script>
     </section>
 
   </main>
@@ -170,6 +196,7 @@
   </footer>
 </body>
 </html>
+
 
 
 
